@@ -8,42 +8,42 @@
              Shell.NavBarIsVisible="False"
              Shell.FlyoutBehavior="Disabled"
              >
-    
     <ContentPage.Content>
-
-        <Frame BorderColor="LightGray" CornerRadius="10" HasShadow="True" Margin="15"
+        <StackLayout>
+            <Image Source="logo.png" />
+            <Frame BorderColor="LightGray" CornerRadius="10" HasShadow="True" Margin="-30"
                HeightRequest="430" WidthRequest="250"
                IsClippedToBounds="True"
                HorizontalOptions="Center" VerticalOptions="Center">
 
-            <StackLayout Padding="10,15,10,0" VerticalOptions="Center">
+                <StackLayout Padding="10,15,10,0" VerticalOptions="Center">
 
-                <Entry HorizontalOptions="Center" WidthRequest="300" Placeholder="Username"/>
+                    <Entry x:Name="usernameEntry" HorizontalOptions="Center" WidthRequest="300" Placeholder="Username"/>
 
-                <Entry HorizontalOptions="Center" WidthRequest="300" IsPassword="True" Placeholder="Password" 
+                    <Entry x:Name="passwordEntry" HorizontalOptions="Center" WidthRequest="300" IsPassword="True" Placeholder="Password" 
                    ClearButtonVisibility="WhileEditing" />
 
-                <Label Padding="8"/>
+                    <Label Padding="8"/>
 
-                <Button HorizontalOptions="Center" Text="Sign in" FontSize="Medium" TextColor="Black" 
+                    <Button HorizontalOptions="Center" Text="Sign in" FontSize="Medium" TextColor="Black" 
                     BackgroundColor="LightGray" WidthRequest="150" CornerRadius="15"
                     Clicked="Sign_in_clicked" Command="{Binding LoginCommand}"/>
 
-                <Label HorizontalOptions="Center" Text="OR" TextColor="Black" FontSize="Large" Padding="30"/>
+                    <Label HorizontalOptions="Center" Text="OR" TextColor="Black" FontSize="Large" Padding="30"/>
 
-                <Button HorizontalOptions="Center" Text="Sign up" FontSize="Default" TextColor="Black" TextTransform="None"
+                    <Button HorizontalOptions="Center" Text="Sign up" FontSize="Default" TextColor="Black" TextTransform="None"
                     BackgroundColor="LightGray" WidthRequest="100" CornerRadius="15" 
                     Clicked="Sign_up_clicked" Command="{Binding RegisterCommand}"/>
 
-                <Label Padding="10"/>
+                    <Label Padding="10"/>
 
-                <Button HorizontalOptions="Center" Text="Forgot your password ?" TextColor="Black" TextTransform="None"
+                    <Button HorizontalOptions="Center" Text="Forgot your password ?" TextColor="Black" TextTransform="None"
                     Background="transparent" WidthRequest="205"  
                     Command="{Binding ForgotPasswordCommand}">
-                </Button>
+                    </Button>
 
-            </StackLayout>
-            
-        </Frame>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
