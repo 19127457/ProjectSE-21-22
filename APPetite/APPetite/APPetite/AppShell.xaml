@@ -29,6 +29,12 @@
         </ResourceDictionary>
     </Shell.Resources>
 
+
+    <ShellItem Route="LoginPage" FlyoutItemIsVisible="False">
+       <ShellContent ContentTemplate="{DataTemplate local:LoginPage}"/>
+    </ShellItem>
+
+
     <TabBar>
         <ShellContent Title="About" Icon="icon_about.png" Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
         <ShellContent Title="Browse" Icon="icon_feed.png" ContentTemplate="{DataTemplate local:ItemsPage}" />

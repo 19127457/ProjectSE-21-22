@@ -5,10 +5,45 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="APPetite.Views.LoginPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             Shell.FlyoutBehavior="Disabled"
+             >
+    
     <ContentPage.Content>
-        <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
-        </StackLayout>
+
+        <Frame BorderColor="LightGray" CornerRadius="10" HasShadow="True" Margin="15"
+               HeightRequest="430" WidthRequest="250"
+               IsClippedToBounds="True"
+               HorizontalOptions="Center" VerticalOptions="Center">
+
+            <StackLayout Padding="10,15,10,0" VerticalOptions="Center">
+
+                <Entry HorizontalOptions="Center" WidthRequest="300" Placeholder="Username"/>
+
+                <Entry HorizontalOptions="Center" WidthRequest="300" IsPassword="True" Placeholder="Password" 
+                   ClearButtonVisibility="WhileEditing" />
+
+                <Label Padding="8"/>
+
+                <Button HorizontalOptions="Center" Text="Sign in" FontSize="Medium" TextColor="Black" 
+                    BackgroundColor="LightGray" WidthRequest="150" CornerRadius="15"
+                    Clicked="Sign_in_clicked" Command="{Binding LoginCommand}"/>
+
+                <Label HorizontalOptions="Center" Text="OR" TextColor="Black" FontSize="Large" Padding="30"/>
+
+                <Button HorizontalOptions="Center" Text="Sign up" FontSize="Default" TextColor="Black" TextTransform="None"
+                    BackgroundColor="LightGray" WidthRequest="100" CornerRadius="15" 
+                    Clicked="Sign_up_clicked" Command="{Binding RegisterCommand}"/>
+
+                <Label Padding="10"/>
+
+                <Button HorizontalOptions="Center" Text="Forgot your password ?" TextColor="Black" TextTransform="None"
+                    Background="transparent" WidthRequest="205"  
+                    Command="{Binding ForgotPasswordCommand}">
+                </Button>
+
+            </StackLayout>
+            
+        </Frame>
     </ContentPage.Content>
 </ContentPage>

@@ -17,5 +17,20 @@ namespace APPetite.Views
             InitializeComponent();
             this.BindingContext = new LoginViewModel();
         }
+
+        private async void Sign_in_clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void Sign_up_clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void Forgot_password_clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
